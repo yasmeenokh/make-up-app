@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+header{
+    height: 100px;
+    margin-bottom: 10px;
+}
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+header nav ul li {
+    margin-top: 20px;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+#indexForm input{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 40%;
+    margin-bottom: 20px;
+}
+#indexForm button{
+    margin-left: 44%;
+}
+.allCardMain{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.allCards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30%;
+    border: solid;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.addMain{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.detailDiv{
+    margin-left: 25%;
+    width: 50%;
+}

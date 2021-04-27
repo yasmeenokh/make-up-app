@@ -15,16 +15,22 @@
                 </li>
                 <li><a href="/allProducts">all Products</a></li>
                 <li><a href="/myCard">myCard</a></li>
+                <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/styles.css">
             </ul>
         </nav>
     </header>
     <main>
-        <div>
+        <div class="allCardMain">
+            
             <% data.forEach(element=>{ %>
-                <h4> name : <%= element.name %> </h4>
+                <div class="allCards">
+
+                <h4>name: <%= element.name %> </h4>
                 <img src="<%= element.image_link %> " alt="">
-                <h4> price : <%= element.price %> </h4>
-                <h4> description : <%= element.description %> </h4>
+                <h4>name: <%= element.price %> </h4>
+                <h4>name: <%= element.description %> </h4>
+                </div>
                 <% }) %> 
         </div>
     </main>
