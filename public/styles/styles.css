@@ -56,3 +56,20 @@ header nav ul li a {
     margin-left: 25%;
     width: 50%;
 }
+#deleteBtn{
+    margin-left: 35%;
+    margin-top: 20px;
+
+}
+#updateBtn{
+    margin-left: 50%;
+    margin-top: 20px;
+    position: absolute;
+    top: 61%;
+
+}
+button{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+}
