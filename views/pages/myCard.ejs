@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,9 +19,18 @@
                 <li><a href="/myCard">myCard</a></li>
             </ul>
         </nav>
-    </header>
+    </header> -->
+    <%- include('./layout/header') %> 
+
     <main>
         <div class="allCardMain">
+            <%if (data.length == 0) { %>
+                <div class="emptyCard">
+                    <p>
+                You haven't added anything to your card yet 
+                click here to add Products</p> <button><a href="/allProducts">add Products</a></button>
+            </div>
+                 <% } %>
         <% data.forEach(element=>{ %>
             <div class="allCards">
             <h4>name: <%= element.name %> </h4>
@@ -33,5 +42,7 @@
             <% }) %> 
         </div>
     </main>
+    <%- include('./layout/footer') %> 
+
 </body>
 </html>

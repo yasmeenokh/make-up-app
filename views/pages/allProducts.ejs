@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,15 +19,17 @@
                 <li><a href="/myCard">myCard</a></li>
             </ul>
         </nav>
-    </header>
+    </header> -->
+    <%- include('./layout/header') %> 
+
     <main>
         <div class="allCardMain">
         <% data.forEach(element=>{ %>
             <div class="allCards">
-            <h4>name: <%= element.name %> </h4>
+            <h4> <span> name: </span> <%= element.name %> </h4>
             <img src="<%= element.image_link %> " alt="">
-            <h4>name: <%= element.price %> </h4>
-            <h4>name: <%= element.description %> </h4>
+            <h4> <span>price:</span> <%= element.price %> </h4>
+            <h4> <span>description:</span>  <%= element.description %> </h4>
             <form action="/myCard" method="POST">
                 <input type="hidden" name="name" value="<%= element.name %> ">
                 <input type="hidden" name="image_link" value="<%= element.image_link %> ">
@@ -40,6 +42,7 @@
             <% }) %> 
         </div>
     </main>
-    
+    <%- include('./layout/footer') %> 
+
 </body>
 </html>

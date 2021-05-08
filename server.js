@@ -11,7 +11,7 @@ const methodOverride = require('method-override');
 const cors = require('cors');
 
 const client = new pg.Client({ connectionString: process.env.DATABASE_URL, 
-    ssl: { rejectUnauthorized: false } 
+    // ssl: { rejectUnauthorized: false } 
 });
 
 server.use(cors());
@@ -37,10 +37,10 @@ function productByPrice (request, response){
     let brand= request.body.maybelline;
     let max= request.body.maxPrice;
     let min = request.body.minPrice;
-    let url =`http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline&price_greater_than=${min}&price_less_than=${max}`
+    let url =`http://makeup-api.herokuapp.com/api/v1/products.json?brand=${brand}&price_greater_than=${min}&price_less_than=${max}`
     superAgent.get(url)
     .then(results=>{
-        console.log(results.body)
+        // console.log(results.body)
         response.render('pages/productByPrice', {data : results.body})
     })
 }

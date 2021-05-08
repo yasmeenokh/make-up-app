@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,18 +20,22 @@
                 <li><a href="/myCard">myCard</a></li>
             </ul>
         </nav>
-    </header>
+    </header> -->
+    <%- include('./layout/header') %> 
+
     <main>
         <div class="detailDiv">
-            <h4> name : <%= element.name %> </h4>
+            <h4> <span>name :</span>  <%= element.name %> </h4>
                 <img src="<%= element.image_link %> " alt="">
-                <h4> price : <%= element.price %> </h4>
-                <h4> description : <%= element.description %> </h4>
+                <h4> <span>price :</span>  <%= element.price %> </h4>
+                <h4> <span>description :</span>  <%= element.description %> </h4>
         </div>
+        <div class="update-delete">
         <form action="/delete/<%= element.id %> " method="POST">
         <button id="deleteBtn">DELETE</button>
         </form>
         <button id="updateBtn">UPDATE</button>
+    </div>
         <form action="/update/<%= element.id %> " method="POST" id="updateForm">
         <input type="text" name="name" value="<%= element.name %>">
         <input type="text" name="image_link" value="<%= element.image_link %>">
@@ -39,10 +43,12 @@
         <input type="text" name="description" value="<%= element.description %>">
         <button>update</button>
         </form>
+    
     </main>
-    <footer>
+
+        <%- include('./layout/footer') %> 
+
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="../app.js"></script>
-    </footer>
 </body>
 </html>
