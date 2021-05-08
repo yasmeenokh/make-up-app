@@ -11,7 +11,7 @@ const methodOverride = require('method-override');
 const cors = require('cors');
 
 const client = new pg.Client({ connectionString: process.env.DATABASE_URL, 
-    // ssl: { rejectUnauthorized: false } 
+    ssl: { rejectUnauthorized: false } 
 });
 
 server.use(cors());
